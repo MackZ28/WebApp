@@ -171,8 +171,8 @@ namespace WebApp.Repos
                 {
                     var list = new Category[]
                     {
-                        new Category { categoryName = "Электрогитары_6", desc = "электрогитара 6-ти струнная" },
-                        new Category { categoryName = "Электрогитары_7", desc = "электрогитара 7-ти струнная" },
+                        new Category { categoryName = "Электрогитары_6", desc = "электрогитары 6-ти струнная" },
+                        new Category { categoryName = "Электрогитары_7", desc = "электрогитары 7-ти струнная" },
                         new Category { categoryName = "Акустические гитары", desc = "аккустические гитары для классической музыки" }
 
                     };

@@ -20,11 +20,15 @@ namespace WebApp.Controllers
             _allCategories = iGuitarCat;
         }
 
+
+        [Route("Guitars/List")]
+        [Route("Guitars/List/{category}")]
         public ViewResult List(string category)
         {
             string _category = category;
             IEnumerable<Guitar> guitars = null;
             string currCategory = "";
+            
 
             if (string.IsNullOrEmpty(category))
             {
@@ -32,19 +36,24 @@ namespace WebApp.Controllers
             }
             else
             {
-                if (string.Equals("electro", category, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals("6_strings", category, StringComparison.OrdinalIgnoreCase))
                 {
-                    guitars = _allGuitars.Guitars.Where(i => i.Category.categoryName.Equals("Электромобили")).OrderBy(i => i.id);
-                    currCategory = "Элктромобили";
+                    guitars = _allGuitars.Guitars.Where(i => i.Category.categoryName.Equals("Электрогитары_6")).OrderBy(i => i.id);
+                    currCategory = "Электрогитары 6 струн";
                 }
-                else if (string.Equals("fuel", category, StringComparison.OrdinalIgnoreCase))
+                else if (string.Equals("7_strings", category, StringComparison.OrdinalIgnoreCase))
                 {
-                    guitars = _allGuitars.Guitars.Where(i => i.Category.categoryName.Equals("Классический автомобиль")).OrderBy(i => i.id);
-                    currCategory = "Бензиновые авто";
+                    guitars = _allGuitars.Guitars.Where(i => i.Category.categoryName.Equals("Электрогитары_7")).OrderBy(i => i.id);
+                    currCategory = "Электрогитары 7 струн";
+                }
+                else if (string.Equals("acoustic", category, StringComparison.OrdinalIgnoreCase))
+                {
+                    guitars = _allGuitars.Guitars.Where(i => i.Category.categoryName.Equals("Акустические гитары")).OrderBy(i => i.id);
+                    currCategory = "Акустические гитары";
                 }
 
 
-                currCategory = _category;
+                //currCategory = _category;
 
 
             }
@@ -55,7 +64,7 @@ namespace WebApp.Controllers
                 currCategory = currCategory
             };
 
-            ViewBag.Title = "Страница с автомобилями";
+            ViewBag.Title = "FuseGuitars";
 
             return View(guitarObj);
         }

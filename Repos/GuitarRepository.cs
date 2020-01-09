@@ -22,6 +22,5 @@ namespace WebApp.Repos
         public IEnumerable<Guitar> getFavGuitars => appDBContent.Guitar.Where(p => p.ifFavourite).Include(c => c.Category);
 
         public Guitar getObjectGuitar(int guitarId) => appDBContent.Guitar.FirstOrDefault(p => p.id == guitarId);
-       
     }
 }

@@ -3,10 +3,9 @@
 <h3>@Model.currCategory</h3>
 <div class="row mt-5 mb-2">
     @{
-        foreach (Guitar guitar in Model.favGuitars)
+        foreach (Guitar guitar in Model.allGuitars)
         {
             @Html.Partial("_AllGuitars", guitar)
         }
-
     }
 </div>

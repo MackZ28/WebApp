@@ -1,0 +1,14 @@
+﻿@using WebApp.ViewModels
+@model HomeViewModel
+
+
+<h1>Главная</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Guitar guitar in Model.favGuitars)
+        {
+            @Html.Partial("_AllGuitars", guitar)
+        }
+
+    }
+</div>

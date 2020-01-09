@@ -1,0 +1,12 @@
+﻿
+<h1>Все гитары</h1>
+<h3>@Model.currCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Guitar guitar in Model.favGuitars)
+        {
+            @Html.Partial("_AllGuitars", guitar)
+        }
+
+    }
+</div>

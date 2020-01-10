@@ -2,8 +2,9 @@
 
 <div class="col-lg-4">
     <img class="img-thumbnail" style="width: auto; height: 400px" src="@Model.img" alt="@Model.name" />
-    <h2>Модель: @Model.name</h2>
+    <h5>@Model.Category.desc</h5>
+    <h2>@Model.name</h2>
     <p>@Model.shortDesc</p>
     <p>Цена: @Model.price.ToString("c", CultureInfo.CreateSpecificCulture("ru-RU"))</p>
-    <p><a class="btn btn-warning center-block" href="#">Подробнее</a></p>
+    <p><a class="btn btn-warning center-block" href="#">В корзину</a></p>
 </div>

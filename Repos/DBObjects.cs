@@ -167,13 +167,13 @@ namespace WebApp.Repos
         {
             get
             {
-                if(category == null)
+                if(category != null)
                 {
                     var list = new Category[]
                     {
-                        new Category { categoryName = "Электрогитары_6", desc = "электрогитары 6-ти струнная" },
-                        new Category { categoryName = "Электрогитары_7", desc = "электрогитары 7-ти струнная" },
-                        new Category { categoryName = "Акустические гитары", desc = "аккустические гитары для классической музыки" }
+                        new Category { categoryName = "Электрогитары_6", desc = "Электрогитара 6-ти струнная" },
+                        new Category { categoryName = "Электрогитары_7", desc = "Электрогитара 7-ти струнная" },
+                        new Category { categoryName = "Акустические гитары", desc = "Акустическая гитара" }
 
                     };
 

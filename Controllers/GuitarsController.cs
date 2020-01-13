@@ -36,7 +36,7 @@ namespace WebApp.Controllers
             }
             else
             {
-                if (string.Equals("6_strings", category, StringComparison.OrdinalIgnoreCase))
+                 if (string.Equals("6_strings", category, StringComparison.OrdinalIgnoreCase))
                 {
                     guitars = _allGuitars.Guitars.Where(i => i.Category.categoryName.Equals("Электрогитары_6")).OrderBy(i => i.id);
                     currCategory = "Электрогитары 6 струн";

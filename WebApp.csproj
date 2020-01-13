@@ -5,8 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Новая папка1\**" />
+    <Content Remove="Views\Новая папка1\**" />
+    <EmbeddedResource Remove="Views\Новая папка1\**" />
+    <None Remove="Views\Новая папка1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Migrations\20200110124604_update.cs" />
     <Compile Remove="Migrations\20200110124604_update.Designer.cs" />
+    <Compile Remove="Views\Cart\index.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -6,5 +6,5 @@
     <h2>@Model.name</h2>
     <p>@Model.shortDesc</p>
     <p>Цена: @Model.price.ToString("c", CultureInfo.CreateSpecificCulture("ru-RU"))</p>
-    <p><a class="btn btn-warning center-block" href="#">В корзину</a></p>
+    <p><a class="btn btn-warning" asp-controller="Cart" asp-action="AddToCart" asp-route-id="@Model.id">В корзину</a></p>
 </div>

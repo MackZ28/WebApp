@@ -26,6 +26,8 @@ namespace WebApp.Controllers
                 favGuitars = _guitarRep.getFavGuitars
             };
 
+            ViewBag.Title = "FuseGuitars - Лучшее";
+
             return View(homeCars);
         }
 

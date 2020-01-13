@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApp.Interfaces;
+using WebApp.Models;
 using WebApp.Repos;
 
 namespace WebApp
@@ -48,7 +49,11 @@ namespace WebApp
             services.AddTransient<IGuitarsCategory, CategoryRepository>();
             services.AddDbContext<AppDBContent>(options => 
             options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
-            
+            services.AddTransient<IAllOrders, OrdersRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped(sp => Cart.GetCart(sp));
+
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
@@ -63,6 +68,7 @@ namespace WebApp
             app.UseStaticFiles();
             // app.UseCookiePolicy();
             //app.UseMvcWithDefaultRoute();
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");

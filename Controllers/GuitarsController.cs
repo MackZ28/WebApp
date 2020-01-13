@@ -63,9 +63,8 @@ namespace WebApp.Controllers
                 allGuitars = guitars,
                 currCategory = currCategory
             };
-
-            ViewBag.Title = "FuseGuitars";
-
+            ViewBag.Title = "FuseGuitars  " + currCategory;
+            
             return View(guitarObj);
         }
     }

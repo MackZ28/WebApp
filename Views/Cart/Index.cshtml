@@ -3,9 +3,9 @@
     @foreach (var el in Model.cart.listItems)
     {
         <div class="alert alert-warning mt-3">
-            <b>Инструмент:</b>@el.guitar.name<br />
-            <b>Цена:</b>@el.guitar.price.ToString("c")
+            <b>Инструмент:</b> @el.guitar.name<br />
+            <b>Цена:</b> @el.guitar.price.ToString("c")
         </div>
     }
-    <a class="btn btn-danger mt-3" asp-controller="Order" asp-action="Checkout">Оплатить</a>
+    <a class="btn btn-danger mt-4" asp-controller="Order" asp-action="Checkout">Оплатить</a>
 </div>

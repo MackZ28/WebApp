@@ -52,10 +52,6 @@ namespace WebApp.Controllers
                     currCategory = "Акустические гитары";
                 }
 
-
-                //currCategory = _category;
-
-
             }
 
             var guitarObj = new GuitarListViewModel
@@ -63,8 +59,15 @@ namespace WebApp.Controllers
                 allGuitars = guitars,
                 currCategory = currCategory
             };
-            ViewBag.Title = "FuseGuitars  " + currCategory;
-            
+
+            if (currCategory != null) 
+            {
+                ViewBag.Title = "FuseGuitars - " + currCategory; 
+            }
+
+            else ViewBag.Title = "FuseGuitars" + currCategory;
+
+
             return View(guitarObj);
         }
     }

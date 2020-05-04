@@ -2,10 +2,11 @@
 <div class="container">
     @foreach (var el in Model.cart.listItems)
     {
-        <div class="alert alert-warning mt-3">
-            <b>Инструмент:</b> @el.guitar.name<br />
-            <b>Цена:</b> @el.guitar.price.ToString("c")
-        </div>
+    <div class="alert alert-warning mt-3">
+        <b>Инструмент:</b> @el.guitar.name<br />
+        <b>Цена:</b> @el.guitar.price.ToString("c")
+        <p><a class="btn btn-warning" asp-controller="Cart" asp-action="RemoveFromCart" asp-route-id="@el.guitar.id">Удалить</a></p>
+    </div>
     }
     <a class="btn btn-danger mt-4" asp-controller="Order" asp-action="Checkout">Оплатить</a>
 </div>

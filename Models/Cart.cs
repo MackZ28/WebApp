@@ -42,6 +42,13 @@ namespace WebApp.Models
 
             appDBContent.SaveChanges();
         }
+
+        public void RemoveFromCart(Guitar guitar)
+        {
+            
+            this.appDBContent.CartItem.Remove(listItems.ElementAt(guitar.id));
+        }
+
         public List<CartItem> getShopItems()
         {
             return appDBContent.CartItem.Where(c => c.CartId == CartId).Include(s => s.guitar).ToList();

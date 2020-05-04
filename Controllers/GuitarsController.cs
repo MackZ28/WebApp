@@ -64,7 +64,6 @@ namespace WebApp.Controllers
             {
                 ViewBag.Title = "FuseGuitars - " + currCategory; 
             }
-
             else ViewBag.Title = "FuseGuitars" + currCategory;
 
 

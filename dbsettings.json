@@ -1,5 +1,7 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=WebAppDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WebAppDB;Trusted_Connection=True;MultipleActiveResultSets=True"
   }
 }
+
+

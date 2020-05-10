@@ -167,7 +167,7 @@ namespace WebApp.Repos
         {
             get
             {
-                if(category != null)
+                if(category == null)
                 {
                     var list = new Category[]
                     {
